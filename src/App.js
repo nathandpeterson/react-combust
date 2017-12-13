@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import FireworksList from './components/FireworksList.js'
+
+const fireworksData = [
+  { id: 1, name: 'Red & Blue Peony', attributeIds: [ 1, 3, 4, 8 ] },
+  { id: 2, name: 'Mini-Flying Fish', attributeIds: [ 2, 6, 7 ] }
+]
 
 class App extends Component {
   render() {
-    return (
-      <div classList="jumbotron jumbotron-fluid">
-        <div classList="container">
-          <h1 classList="display-3">Fluid jumbotron</h1>
-          <p classList="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    return ( <main>
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+          <h1 className="display-3">Combustible Whatever</h1>
         </div>
       </div>
+      <FireworksList fireworks={ fireworksData } />
+    </main>
     )
   }
 }
